@@ -1,4 +1,4 @@
-from PIL import Image, ImageFilter, ImageChops, ImageStat as stat
+from PIL import Image, ImageFilter, ImageChops, ImageStat
 from math import sqrt
 import numpy as np
 import matplotlib.pyplot as plt
@@ -64,7 +64,7 @@ def pokaz_roznice(obraz1, obraz2):  # wyrzuca obraz z ImageChops tylko używa do
 
 
 def statystyki(obraz):
-    s = stat.Stat(obraz)
+    s = ImageStat.Stat(obraz)
     print("extrema ", s.extrema)  # max i min
     print("count ", s.count)  # zlicza
     print("mean ", s.mean)  # srednia
@@ -104,7 +104,7 @@ def statystyki(obraz):
 # print(ImageFilter.EMBOSS.filterargs)
 # im_SOBEL1 = im_L.filter(ImageFilter.Kernel((3, 3), (-1, 0, 1, -2, 0, 2, -1, 0, 1), 1, 128))
 # im_SOBEL2 = im_L.filter(ImageFilter.Kernel((3, 3), (-1, -2, -1, 0, 0, 0, 1, 2, 1), 1, 128))
-#
+
 # plt.figure(figsize=(16, 8))
 # plt.subplot(1, 4, 1)
 # plt.title("po konwersji na L")
@@ -134,7 +134,7 @@ def statystyki(obraz):
 # diff_EDGE_ENHANCE_MORE = ImageChops.difference(im, im_EDGE_ENHANCE_MORE)
 # diff_SHARPEN = ImageChops.difference(im, im_SHARPEN)
 # diff_SMOOTH_MORE = ImageChops.difference(im, im_SMOOTH_MORE)
-#
+
 # plt.figure(figsize=(16, 40))
 # plt.subplot(4, 2, 1)
 # plt.title("DETAIL")
@@ -188,7 +188,7 @@ def statystyki(obraz):
 # diff_MinFilter = ImageChops.difference(im, im_MinFilter)
 # im_MaxFilter = im.filter(ImageFilter.MaxFilter(9))
 # diff_MaxFilter = ImageChops.difference(im, im_MaxFilter)
-#
+
 # plt.figure(figsize=(16, 48))
 # plt.subplot(5, 2, 1)
 # plt.title("GaussianBlur(1, 3)")
@@ -233,4 +233,3 @@ def statystyki(obraz):
 # plt.subplots_adjust(wspace=0.05, hspace=0.05)
 # plt.savefig('fig4.png')
 # plt.show()
-
