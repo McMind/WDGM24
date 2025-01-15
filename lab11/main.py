@@ -44,3 +44,19 @@ im2 = Image.open('obraz2.png')
 # del d
 # im1_tekst2 = Image.alpha_composite(im1_tekst2, txt)
 # im1_tekst2.save('obraz1_tekst2.png')
+
+# obraz4a = Image.new('RGB',(200,100),'blue')
+# dctx = ImageDraw.Draw(obraz4a)
+# dctx.ellipse((0,0,100,100),outline='#ff69b4',width=5)
+# dctx.ellipse((100,0,200,100),outline='#00964b',width=5)
+# del dctx
+# obraz4a.save('obraz4a.png')
+
+# obraz4b = im1.copy()
+# dctx = ImageDraw.Draw(obraz4b)
+# coords1 = [(140,0),(280,140),(140,280),(0,140)]
+# dctx.polygon(coords1,outline='black', width=5)
+# coords2 = [(140,500),(280,360),(140,220),(0,360)]
+# dctx.polygon(coords2,outline='black', width=5)
+# del dctx
+# obraz4b.save('obraz4b.png')
